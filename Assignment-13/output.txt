@@ -1,0 +1,357 @@
+//OS-FILE ORGANIZATION TECHNIQUES IN C
+
+
+/*OUTPUT SINGLE LEVEL DIRECTORY
+C:\Users\Likhitha\Desktop>gcc -o n singlelevel.c
+C:\Users\Likhitha\Desktop>n
+Enter name of directory : OS
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 1
+Enter the name of the file : u1_os
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 1
+Enter the name of the file : u2_os
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 1
+Enter the name of the file : u1_os
+FILE ALREADY EXISTS!
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 4
+The Files are :
+File Location
+u1_os 10
+u2_os 25
+1. Create File 
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 2
+Enter the name of the file : u2_os
+File u2_os is deleted
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 4
+The Files are :
+File Location
+u1_os 10
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 1
+Enter the name of the file : u3_os
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 3
+Enter the name of the file : u1_os
+File u1_os is found
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 4
+The Files are :
+File Location
+u1_os 10
+u3_os 25
+1. Create File
+2. Delete File
+3. Search File
+4. Display Files
+5. Exit
+Enter your choice : 5
+C:\Users\Likhitha\Desktop> */
+/*OUTPUT-TWO LEVEL DIRECTORY
+C:\Users\Likhitha\Desktop>n
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:1
+Enter name of directory:OS
+Directory created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:2
+Enter name of the directory:OS
+Enter name of the file:unit1_os
+File created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:2
+Enter name of the directory:OS
+Enter name of the file:unit2_os
+File created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:1
+Enter name of directory:COA
+Directory created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:2
+Enter name of the directory:COA
+Enter name of the file:unit1_coa
+File created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:2
+Enter name of the directory:COA
+Enter name of the file:unit2_coa
+File created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:5
+Directory Files
+OS unit1_os unit2_os
+COA unit1_coa unit2_coa
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:2
+Enter name of the directory:OS
+Enter name of the file:unit3_os
+File created
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:4
+Enter name of the directory:OS
+Enter the name of the file:unit3_os
+File unit3_os is found
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:3
+Enter name of the directory:COA
+Enter name of the file:unit2_coa
+File unit2_coa is deleted
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:5
+Directory Files
+OS unit1_os unit2_os unit3_os
+COA unit1_coa
+1. Create Directory
+2. Create File
+3. Delete File
+4. Search File
+5. Display
+6. Exit
+Enter your choice:6
+C:\Users\Likhitha\Desktop>
+*/
+/*OUTPUT TREE STRUCTURED DIRECTORIES
+C:\Users\Likhitha\Desktop>gcc -o n treelevel.c
+C:\Users\Likhitha\Desktop>n
+Enter name: Likhitha
+Enter dir(1) or file(0): 1
+Enter number of child nodes for Likhitha:2
+Enter name: OS
+Enter dir(1) or file(0): 1
+Enter name: COA
+Enter dir(1) or file(0): 1
+Enter number of child nodes for OS:2
+Enter name: unit1_OS
+Enter dir(1) or file(0): 1
+Enter name: unit2_OS
+Enter dir(1) or file(0): 1
+Enter number of child nodes for COA:2
+Enter name: unit1_COA
+Enter dir(1) or file(0): 1
+Enter name: unit2_COA
+Enter dir(1) or file(0): 1
+Enter number of child nodes for unit1_OS:2
+Enter name: chap1_unit1_OS
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit1_OS
+Enter dir(1) or file(0): 0
+Enter number of child nodes for unit2_OS:2
+Enter name: chap1_unit2_OS
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit2_OS
+Enter dir(1) or file(0): 0
+Enter number of child nodes for unit1_COA:2
+Enter name: chap1_unit1_COA
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit1_COA
+Enter dir(1) or file(0): 0
+Enter number of child nodes for unit2_COA:2
+Enter name: chap1_unit2_COA
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit2_COA
+Enter dir(1) or file(0): 0
+--Tree Structure Directory--
+(1-Directory 0-File)
+DIR: Likhitha(1) //ROOT
+DIR: OS(1) //DIR 1
+DIR: unit1_OS(1) //SUBDIR 1 under DIR 1
+chap1_unit1_OS(0) // FILE under SUBDIR 1
+chap2_unit1_OS(0) //FILE under SUBDIR 1
+DIR: unit2_OS(1) //SUBDIR 2 under DIR 1
+chap1_unit2_OS(0) //FILE under SUBDIR 2
+chap2_unit2_OS(0) //FILE under SUBDIR 2
+DIR: COA(1) //DIR 2
+DIR: unit1_COA(1) //SUBDIR 1 under DIR 2
+chap1_unit1_COA(0) //FILE under SUBDIR 1
+chap2_unit1_COA(0) //FILE under SUBDIR 1
+DIR: unit2_COA(1) //SUBDIR 2 under DIR 2
+chap1_unit2_COA(0) //FILE under SUBDIR 2
+chap2_unit2_COA(0) //FILE under SUBDIR 2
+*/
+/*OUTPUT DAG DIRECTORY
+C:\Users\Likhitha\Desktop>gcc -o n trydag.c
+C:\Users\Likhitha\Desktop>n
+Enter name: Likhitha
+Enter dir(1) or file(0): 1
+1.Create fil/dir
+2.Create link
+1
+Enter number of child nodes for Likhitha:3
+Enter name: OS
+Enter dir(1) or file(0): 1
+Enter name: COA
+Enter dir(1) or file(0): 1
+Enter name: DS
+Enter dir(1) or file(0): 1
+Enter number of child nodes for OS:2
+Enter name: intro
+Enter dir(1) or file(0): 0
+Enter name: unit1_OS
+Enter dir(1) or file(0): 1
+Enter number of child nodes for COA:2
+Enter name: intro
+Enter dir(1) or file(0): 0
+Enter name: unit1_COA
+Enter dir(1) or file(0): 1
+Enter number of child nodes for DS:2
+Enter name: intro
+Enter dir(1) or file(0): 0
+Enter name: unit1_DS
+Enter dir(1) or file(0): 1
+Enter number of child nodes for unit1_OS:2
+Enter name: chap1_unit1_OS
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit1_OS
+Enter dir(1) or file(0): 0
+Enter number of child nodes for unit1_COA:2
+Enter name: chap1_unit1_COA
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit1_COA
+Enter dir(1) or file(0): 0
+Enter number of child nodes for unit1_DS:2
+Enter name: chap1_unit1_DS
+Enter dir(1) or file(0): 0
+Enter name: chap2_unit1_DS
+Enter dir(1) or file(0): 0
+--Tree Structure Directory--
+(1-Directory 0-File)
+DIR: Likhitha(1)
+DIR: OS(1)
+ intro(0)
+DIR: unit1_OS(1)
+ chap1_unit1_OS(0)
+ chap2_unit1_OS(0)
+DIR: COA(1)
+ intro(0)
+DIR: unit1_COA(1)
+ chap1_unit1_COA(0)
+ chap2_unit1_COA(0)
+DIR: DS(1)
+ intro(0)
+DIR: unit1_DS(1)
+ chap1_unit1_DS(0)
+ chap2_unit1_DS(0)
+1.Create fil/dir
+2.Create link
+2
+Enter destination directory:OS
+Enter source directory:unit1_COA
+Enter the filename:chap1_unit1_COA
+--Tree Structure Directory--
+(1-Directory 0-File)
+DIR: Likhitha(1)
+DIR: OS(1)
+ Link:chap1_unit1_COA(0)-From dir:unit1_COA
+ intro(0)
+DIR: unit1_OS(1)
+ chap1_unit1_OS(0)
+ chap2_unit1_OS(0)
+DIR: COA(1)
+ intro(0)
+DIR: unit1_COA(1)
+ chap1_unit1_COA(0)
+ chap2_unit1_COA(0)
+DIR: DS(1)
+ intro(0)
+DIR: unit1_DS(1)
+ chap1_unit1_DS(0)
+ chap2_unit1_DS(0)
+1.Create fil/dir
+2.Create link
+0
+C:\Users\Likhitha\Desktop> */

@@ -1,0 +1,145 @@
+(base) MSMLs-iMac:ex3 msml$ ./fcfs_sjf
+			CPU SCHEDULING ALGORITHMS
+
+
+1.FCFS
+2.SJF
+3.Exit
+
+Enter your option: 1
+		FCFS CPU SCHEDULER
+
+		No. of processes: 5
+		Process ID  :	P1		Arrival Time:	0		Burst Time  :	 6
+		Process ID  :	P2		Arrival Time:	1		Burst Time  :	 2
+		Process ID  :	P3		Arrival Time:	1		Burst Time  :	 3
+		Process ID  :	P4		Arrival Time:	2		Burst Time  :	 1
+		Process ID  :	P5		Arrival Time:	2		Burst Time  :	 2
+GANTT CHART
+
++----------------++----------------++----------------++----------------++----------------+
+|       P1             ||     	    P2         ||         P3.         ||          P4          ||         P5          |
++----------------++----------------++----------------++----------------++----------------+
+0.0                  6.0                      8.0                   11.0                   12.0                14.0
+
+
+—————————————————————————————————————
+Process ID 	 Arrival time 	 Burst time	 Turnaround time 		      Waiting time
+—————————————————————————————————————
+P1			0.00			6.00				6.00			               0.00
+
+P2			1.00			2.00				7.00		               5.00
+
+P3			1.00			3.00				10.00	               7.00
+
+P4			2.00			1.00				10.00	               9.00
+
+P5			2.00			2.00				12.00		              10.00
+
+								                  ------		               ------
+						Average		          9.00		               6.20
+								                  ------	               ------
+Want to continue?(y/n): y
+
+	CPU SCHEDULING ALGORITHMS
+
+
+1.FCFS
+2.SJF
+3.Exit
+
+Enter your option: 2
+
+		SJF CPU SCHEDULER
+
+		a.Non Preemptive SJF
+		b.Preemptive SJF
+
+		Enter your option: a
+
+		No. of processes: 5
+		Process ID  :	P1		Arrival Time:	0		Burst Time  :	 6
+		Process ID  :	P2		Arrival Time:	1		Burst Time  :	 2
+		Process ID  :	P3		Arrival Time:	1		Burst Time  :	 3
+		Process ID  :	P4		Arrival Time:	2		Burst Time  :	 1
+		Process ID  :	P5		Arrival Time:	2		Burst Time  :	 2
+
+		NON PREEMPTIVE SJF:
+
+
+GANTT CHART
+
++----------------++----------------++----------------++----------------++----------------+
+|          P1          ||         P4          ||           P2          ||          P5          ||          P3         |
++----------------++----------------++----------------++----------------++----------------+
+0.0                   6.0                   7.0                      9.0                   11.0                  14.0
+
+
+-----------------------------------------------------------------------------------------------------------
+Process ID 	Arrival time 	Burst time		Turnaround time  	         Waiting time
+-----------------------------------------------------------------------------------------------------------
+P1			0.00			6.00				6.00		               0.00
+
+P2			1.00			2.00				8.00	                        6.00
+
+P3			1.00			3.00				13.00		               10.00
+
+P4			2.00			1.00				5.00	                        4.00
+
+P5			2.00			2.00				9.00	                        7.00
+
+									        ------		                 ------
+							Average		8.20		                 5.40
+								     	        ------	                          ------
+Want to continue?(y/n): y
+
+
+CPU SCHEDULING ALGORITHMS
+
+
+1.FCFS
+2.SJF
+3.Exit
+
+Enter your option: 2
+		SJF CPU SCHEDULER
+
+		a.Non Preemptive SJF
+		b.Preemptive SJF
+
+		Enter your option: b
+
+		No. of processes: 5
+		Process ID  :	P1		Arrival Time:	0		Burst Time  :	 6
+		Process ID  :	P2		Arrival Time:	1		Burst Time  :	 2
+		Process ID  :	P3		Arrival Time:	1		Burst Time  :	 3
+		Process ID  :	P4		Arrival Time:	2		Burst Time  :	 1
+		Process ID  :	P5		Arrival Time:	2		Burst Time  :	 2
+
+		PREEMPTIVE SJF:
+
+
+GANTT CHART: 
++------------++-----------++------------++-----------++-----------++-------------+
+|       P1       ||       P2       ||       P4       ||       P5       ||       P3       ||       P1       |
++------------++-----------++------------++-----------++-----------++-------------+
+0.0              1.0              3.0              4.0              6.0              9.0              14.0              
+
+
+-----------------------------------------------------------------------------------------------------------
+Process ID  	Arrival time 	Burst time		Turnaround time            Waiting time
+-----------------------------------------------------------------------------------------------------------
+P1			0.00			6.00				14.00			                     8.00
+
+P2			1.00			2.00				2.00	                     	         0.00
+
+P3			1.00			3.00				8.00		                      5.00
+
+P4			2.00			1.00				2.00   	                     1.00
+
+P5			2.00			2.00				4.00	  	                     2.00
+
+									        ------      												                  ------
+							Average		6.00	       																						                3.20
+										------  	                      ------
+Want to continue?(y/n):n

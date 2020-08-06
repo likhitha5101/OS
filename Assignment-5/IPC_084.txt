@@ -1,0 +1,226 @@
+Script started on 2020-03-29 21:43:05+0530
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ gcc case.c - o ca
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ gcc file_transer.c -o file
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ gcc client.c -o c
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ gcc server.c -o s
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ cat case.c
+#include<sys/ipc.h>
+#define NULL 0
+#include<sys/shm.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+void strupr(char *a)
+{
+	for(int i = 0; a[i] != '\0'; i++)
+		a[i] -= (a[i] >= 'a' && a[i] <= 'z') ? 32 : 0;
+}
+int main()
+{
+	int pid, id;
+	char *a, *b;
+	id = shmget(111, 50, IPC_CREAT | 00666);
+	pid = fork();
+	if(pid > 0)
+	{
+		a = shmat(id, NULL, 0);
+		a[0] = '\0';
+		printf("Enter a string: ");
+		scanf("%s", a);
+		wait(NULL);
+		shmdt(a);
+	}
+	else
+	{
+		b = shmat(id, NULL, 0);
+		while(b[0] == '\0');
+		strupr(b);
+		printf("Uppercase: %s\n", b);
+		shmdt(b);
+	}
+	shmctl(id, IPC_RMID, NULL);
+}
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ cat fie[Kle_transer.c 
+#include <sys/ipc.h>
+# define NULL 0
+#include <sys/shm.h>
+#include <sys/types.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include <sys/wait.h>
+#include <stdio_ext.h>
+#include<ctype.h>
+#include<sys/stat.h>
+#include<fcntl.h>
+#include<unistd.h>
+
+
+int main()
+{
+char *a,*b,c;
+int id,n,i;
+int size;
+int pid;
+int fs;
+char *fname;
+printf("\n FILE TRANSER \n");
+int pid_file;
+int rd;
+pid_file = shmget(111,50, IPC_CREAT| 00666 );
+pid=fork();
+if(pid>0)
+{
+	printf("Inside parent process \n");
+	a = (char*)shmat(pid_file,NULL,0);
+	printf("Enter the file name to be transferred \n");
+	scanf(" %[^\n]",fname);
+	fs = open(fname, O_RDONLY);
+	if(fs == -1)
+		printf("file does not exists \n");
+	else
+	{
+		size = read(fs,a,500);
+		a[size] = '\n';
+	}
+	wait(NULL);
+	close(fs);
+	shmdt(a);
+}
+else
+{
+	sleep(4);
+	printf("Inside Child Process \n");
+	
+	b = (char*)shmat(pid_file,NULL,0);
+	printf("Enter destination file name \n");
+	scanf("%[^\n]",fname);
+	int fd = open(fname,O_WRONLY |O_CREAT| O_TRUNC ,S_IRUSR|S_IRWXU| 00666);
+	if(fd == -1)
+	{
+		printf("Destination doesnt exist \n");
+		creat(fname,O_RDWR | 00666);
+	}
+	write(fd,b,200);
+	printf("File copied \n");
+	close(fd);
+	shmdt(b);
+}
+shmctl(pid_file,IPC_RMID,NULL);
+}
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ cat server.c 
+#include<sys/ipc.h>
+#define NULL 0
+#include<sys/shm.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+int main()
+{
+	int id;
+	char *a;
+	id = shmget(115, 50, IPC_CREAT | 00666);
+	a = shmat(id, NULL, 0);
+	while(1) {
+		a[0] = '\0';
+		printf("You: ");
+		scanf("%s", a);
+		if(a[0] == '*') break;
+		sleep(1);
+		while(a[0] == '\0');
+		printf("Server: %s\n", a);
+		if(a[0] == '*') break;
+	}
+	printf("Connection Ended!\n");
+	shmdt(a);
+	shmctl(id, IPC_RMID, NULL);
+}
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ cat client.c 
+
+#include<sys/ipc.h>
+#define NULL 0
+#include<sys/shm.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+int main()
+{
+	char *a;
+	int id = shmget(115, 50, IPC_CREAT | 00666);
+	a = shmat(id, NULL, 0);
+	while(1) {
+		while(a[0] == '\0');
+		printf("Client: %s\n", a);
+		if(a[0] == '*') break;
+		a[0] = '\0';
+		printf("You: ");
+		scanf("%s", a);
+		if(a[0] == '*') break;
+		sleep(1);
+	}
+	printf("Connection Ended!\n");
+	shmdt(a);
+	shmctl(id, IPC_RMID, NULL);
+}
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ ./ca
+Enter a string: kasd #  asd  24
+Uppercase: KASDA24
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ ./file
+
+ FILE TRANSER 
+Inside parent process 
+Enter the file name to be transferred 
+mcp.c
+Inside Child Process 
+Enter destination file name 
+check.c
+File copied 
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ cat check,c[K[K.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+	int src, dest, rd, wrt;
+	char c;
+	char *buff[1024];
+	
+	if(argc<3 |]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ ./c[Ks
+You: Hi
+Server: Hello
+You: HGa  ave a gog  ood dat y
+Server: server
+You: Server: a
+You: Server: good
+You: Server: day
+You: bye
+
+]0;Likhitha@Likhitha: ~/Desktop/ipc[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/ipc[00m$ exit
+exit
+
+// client output
+Client: Hi
+You: Hello server
+Client: Have
+You: Client: server
+You: you too
+Client: you
+You: Client: too
+You: $bye
+
+
+
+Script done on 2020-03-29 21:45:34+0530

@@ -1,0 +1,193 @@
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 1
+
+Print Total Frame available : 10
+Frames required by the process : 4
+Enter reference string - (size 20) : 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 2
+7 
+7 0 
+7 0 1 
+7 0 1 2 
+7 0 1 2 
+removed 7
+0 1 2 3 
+0 1 2 3 
+removed 0
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+removed 1
+2 3 4 0 
+2 3 4 0 
+2 3 4 0 
+removed 2
+3 4 0 1 
+removed 3
+4 0 1 2 
+4 0 1 2 
+4 0 1 2 
+removed 4
+0 1 2 7 
+0 1 2 7 
+0 1 2 7 
+Total number of pagefaults : 10 
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 6
+]0;Likhitha@Likhitha: ~/Desktop/replacem[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/replacem[00m$ ./r
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 1
+
+Print Total Frame available : 10
+Frames required by the process : 4
+Enter reference string - (size 20) : 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 3
+7 
+7 0 
+7 0 1 
+7 0 1 2 
+7 0 1 2 
+3 0 1 2 
+3 0 1 2 
+3 0 4 2 
+3 0 4 2 
+3 0 4 2 
+3 0 4 2 
+3 0 4 2 
+3 0 4 2 
+1 0 4 2 
+1 0 4 2 
+1 0 4 2 
+1 0 4 2 
+1 0 7 2 
+1 0 7 2 
+1 0 7 2 
+Total number of pagefaults : 8 
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 6
+]0;Likhitha@Likhitha: ~/Desktop/replacem[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/replacem[00m$ ./r
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 1
+
+Print Total Frame available : 10
+Frames required by the process : 3
+Enter reference string - (size 20) : 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 4
+7 
+7 0 
+7 0 1 
+2 0 1 
+2 0 1 
+2 0 3 
+2 0 3 
+4 0 3 
+4 0 2 
+4 3 2 
+0 3 2 
+0 3 2 
+0 3 2 
+1 3 2 
+1 3 2 
+1 0 2 
+1 0 2 
+1 0 7 
+1 0 7 
+1 0 7 
+Total number of pagefaults : 12 
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 6
+]0;Likhitha@Likhitha: ~/Desktop/replacem[01;32mLikhitha@Likhitha[00m:[01;34m~/Desktop/replacem[00m$ ./r
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 1
+
+Print Total Frame available : 10
+Frames required by the process : 3
+Enter reference string - (size 20) : 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 5
+7 
+7 0 
+7 0 1 
+2 0 1 
+2 0 1 
+3 0 1 
+3 0 1 
+4 0 1 
+2 0 1 
+2 0 3 
+2 0 3 
+2 0 3 
+2 0 3 
+1 0 3 
+2 0 3 
+2 0 3 
+2 0 1 
+2 0 7 
+2 0 7 
+2 0 1 
+Total number of pagefaults : 13 
+1. READ_INPUT 
+2. FIFO
+3. OPTIMAL 
+4. LRU ( Least recently used)
+5. LFU (Least Frequently used
+6. Exit
+Enter choice : 6

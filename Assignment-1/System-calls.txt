@@ -1,0 +1,263 @@
+System commands:
+
+1.cp
+
+
+(base) MSMLs-iMac:~/Desktop$ cat > copy.txt
+This is the source file.....
+^C
+(base) MSMLs-iMac:~/Desktop$ cp copy.txt dest.txt
+(base) MSMLs-iMac:~/Desktop$ cat dest.txt
+This is the source file.....
+(base) MSMLs-iMac:~/Desktop$ cp -p copy.txt dest1.txt
+(base) MSMLs-iMac:~/Desktop$ cat dest1.txt
+This is the  source file.....
+(base) MSMLs-iMac:~/Desktop$ cat > copy1.txt
+this is new source file...
+^C
+(base) MSMLs-iMac:~/Desktop$ cp -n copy1.txt dest.txt
+(base) MSMLs-iMac:~/Desktop$ cat dest.txt
+This is the source file.....
+(base) MSMLs-iMac:~/Desktop$ cp -s copy.txt dest2.txt
+(base) MSMLs-iMac:~/Desktop$ cat dest2.txt
+This is the source file.....
+(base) MSMLs-iMac:~/Desktop$ cp -u copy1.txt dest.txt
+(base) MSMLs-iMac:~/Desktop$ cat dest.txt
+this is new source file...
+
+
+2. mv
+
+(base) MSMLs-iMac:~$ cat > move.txt
+This is source file to be moved......
+^C
+(base) MSMLs-iMac:~$ mv move.txt dest.txt
+(base) MSMLs-iMac:~$ cat dest.txt
+This is source file to be moved......
+(base) MSMLs-iMac:~$ cat move.txt
+cat: move.txt: No such file or directory
+
+(base) MSMLs-iMac:~/Desktop/OS$ mv -i src mv1/dest
+mv: overwrite 'mv1/dest'? 1
+
+(base) MSMLs-iMac:~/Desktop/OS$ mv -f src mv1/dest
+(base) MSMLs-iMac:~/Desktop/OS$ cd mv1
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat dest
+This is source!!
+3. ls
+
+(base) MSMLs-iMac:~/Desktop$ ls
+OS                       Session1_Recursion_1086.zip  session2_me_1086.zip
+Session1_Recursion_1034  session2
+
+(base) MSMLs-iMac:~/Desktop$ ls -l
+total 20
+drwxr-xr-x 3 MSML MSML 4096 Jan 12 08:32 OS
+drwxr-xr-x 3 MSML MSML 4096 Jan  9 03:39 Session1_Recursion_1086
+-rw-r--r-- 1 MSML MSML 3590 Jan  9 03:38 Session1_Recursion_1034.zip
+drwxr-xr-x 3 MSML MSML 4096 Jan  9 09:35 session2
+-rw-r--r-- 1 MSML MSML 2184 Jan  9 09:35 session2_me_1086.zip
+
+(base) MSMLs-iMac:~/Desktop$ ls -a
+.   Session1_Recursion_1034      session2_me_1086.zip
+..  Session1_Recursion_1034.zip
+OS  session2
+
+(base) MSMLs-iMac:~/Desktop$ ls -ai
+160420 .   161210 Session1_Recursion_1086     161234 session2_me_1086.zip
+160383 ..  160803 Session1_Recursion_1086.zip
+666635 OS  161357 session2
+
+4. grep
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ grep '[aeiou]' dest
+This is source!!
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat > new
+ae
+asu gip
+^C
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ grep -w '[aeiou]*' new
+ae
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ grep -vw '[aeiou]*' new
+asu gip
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ grep -i '[aeiou]*' new
+ae
+asu gip
+
+5.chmod
+
+(base) MSMLs-iMac:~/Desktop$ chmod -w -c new
+mode of 'new' changed from 0644 (rw-r--r--) to 0444 (r—r--r--)
+
+(base) MSMLs-iMac:~/Desktop$ chmod +x -v new
+mode of 'new' changed from 0444 (r--r--r--) to 0555 (r-xr-xr-x)
+
+6. cat
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat > doc
+This is new document
+^C
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat doc
+This is new document
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat >> doc
+add a line
+^C
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat -n doc
+     1	This is new document
+     2	add a line
+     3	
+     4	dis
+     5	
+     6	ss
+     7	
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat -b doc
+     1	This is new document
+     2	add a line
+
+     3	dis
+
+     4	ss
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ cat -E doc
+This is new document$
+add a line$
+$
+dis$
+$
+ss$
+$
+
+
+7. mkdir
+
+(base) MSMLs-iMac:~/Desktop$ mkdir -m=r dir
+(base) MSMLs-iMac:~/Desktop$ cd dir
+bash: cd: dir: Permission denied
+
+(base) MSMLs-iMac:~/Desktop$ mkdir dir1
+(base) MSMLs-iMac:~/Desktop$ cd dir1
+
+(base) MSMLs-iMac:~/Desktop/dir1$ mkdir -p parent
+
+(base) MSMLs-iMac:~/Desktop$ mkdir -v newdir
+mkdir: created directory 'newdir'
+
+8. rm
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ rm -i new
+rm: remove regular file 'new'? 1
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ rm doc
+
+(base) MSMLs-iMac:~/Desktop/OS/mv1$ rm -v dest
+removed 'dest'
+
+(base) MSMLs-iMac:~/Desktop/OS$ rm -d mv1
+
+9. rmdir
+
+(base) MSMLs-iMac:~/Desktop$ rmdir -v OS
+rmdir: removing directory, 'OS'
+
+
+10. wc
+
+(base) MSMLs-iMac:~/Desktop$ wc -c new
+4 new
+
+(base) MSMLs-iMac:~/Desktop$ wc -l new
+1 new
+
+(base) MSMLs-iMac:~/Desktop$ wc -m new
+4 new
+
+
+
+11. who
+
+(base) MSMLs-iMac:~/Desktop$ who -a
+           system boot  2020-01-12 09:03
+           run-level 5  2020-01-12 09:03
+MSML      ? :0           2020-01-12 09:04   ?          1504 (:0)
+
+(base) MSMLs-iMac:~/Desktop$ who -b
+         system boot  2020-01-12 09:03
+
+(base) MSMLs-iMac:~/Desktop$ who -H
+NAME     LINE         TIME             COMMENT
+MSML      :0           2020-01-12 09:04 (:0)
+
+(base) MSMLs-iMac:~/Desktop$ who -q
+MSML
+# users=1
+
+
+12. pipe
+
+(base) MSMLs-iMac:~/Desktop$ ls | wc -w
+9
+
+(base) MSMLs-iMac:~/Desktop$ ls -l | wc -l
+10
+
+
+
+
+
+13. head,tail
+
+(base) MSMLs-iMac:~/Desktop$ head -v newfile
+==> newfile <==
+Open just about any book, and you’ll find plenty of short paragraphs. If direct speech is used, there’ll be a new paragraph every time a new speaker starts to talk. News writers also like using short paragraphs. They have to present information in a succinct way and hold the reader’s attention.
+Commercial writers know that most people don’t want to read 1,000 words of closely-spaced text in order to see what they are writing about, so they also like to keep sentences and paragraphs short. They’ll even use lots of sub-headers so you can see what each paragraph is about before you read it.
+
+(base) MSMLs-iMac:~/Desktop$ head -n 5 newfile
+Open just about any book, and you’ll find plenty of short paragraphs. If direct speech is used, there’ll be a new paragraph every time a new speaker starts to talk. News writers also like using short paragraphs. They have to present information in a succinct way and hold the reader’s attention.
+
+(base) MSMLs-iMac:~/Desktop$ tail -n 4 newfile
+       tail(1)
+
+       of closely-spaced text in order to see what they are writing about, so they also like to keep sentences and paragraphs short. They’ll even use lots of sub-headers so you can see what each paragraph is about before you read it.
+
+
+14. nl
+
+(base) MSMLs-iMac:~/Desktop$ nl -bt newfile
+1 Open just about any book, and you’ll find plenty of short paragraphs.    2If direct speech is used, there’ll be a new paragraph every time a new 3speaker starts to talk. News writers also like using short paragraphs. They 4have to present information in a succinct way and hold the reader’s 5attention.
+6Commercial writers know that most people don’t want to read 1,000 7words of closely-spaced text in order to see what they are writing about, 8so they also like to keep sentences and paragraphs short. They’ll even use 9lots of sub-headers so you can see what each paragraph is about before 10you read it.
+
+
+15. awk,sed
+
+(base) MSMLs-iMac:~/Desktop/tutorial8$ cat file1.txt
+hi this is ssn
+cse dept
+os lab
+good day
+--------------------------------------------------------------------------------
+(base) MSMLs-iMac:~/Desktop/tutorial8$ sed 'a\ ' file1.txt
+hi this is ssn
+ cse dept
+ 
+os lab 
+good day
+ 
+(base) MSMLs-iMac:~/Desktop$ seq 1 10 |  sed -n '1!G;h;$p'
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+(base) MSMLs-iMac:~/Desktop/unix$ cat > new
+hi
+this is me
+i am from cse
+^C

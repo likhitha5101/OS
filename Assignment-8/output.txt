@@ -1,0 +1,223 @@
+			Enter number of memory partitions 
+3
+			Enter partition details 
+Enter starting address 
+100
+Enter ending address 
+110
+Enter state 
+-1
+Enter starting address 
+110
+Enter ending address 
+150
+Enter state 
+-1
+Enter starting address 
+150
+Enter ending address 
+210
+Enter state 
+-1
+				Memory Allocation Algorithm 
+1.First Fit 
+2.Best Fit 
+3.Worst Fit 
+4.Exit 
+Enter choice 
+1
+					FIRST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+1
+Enter process id 
+13
+Enter size required 
+15
+Memory Allocation Success 
+allocated list 
+Start address : 110 
+End Address : 125 
+State : 13 
+free pool  list 
+Start address : 100 
+End Address : 110 
+State : -1 
+Start address : 125 
+End Address : 150 
+State : -1 
+Start address : 150 
+End Address : 210 
+State : -1 
+					FIRST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+5
+				Memory Allocation Algorithm 
+1.First Fit 
+2.Best Fit 
+3.Worst Fit 
+4.Exit 
+Enter choice 
+2
+					BEST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+1
+Enter process id 
+87
+Enter size required 
+4 30
+Memory Allocation Success 
+allocated list 
+Start address : 110 
+End Address : 125 
+State : 13 
+Start address : 150 
+End Address : 180 
+State : 87 
+free pool  list 
+Start address : 100 
+End Address : 110 
+State : -1 
+Start address : 125 
+End Address : 150 
+State : -1 
+Start address : 180 
+End Address : 210 
+State : -1 
+					BEST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+5
+				Memory Allocation Algorithm 
+1.First Fit 
+2.Best Fit 
+3.Worst Fit 
+4.Exit 
+Enter choice 
+3
+				WORST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+4 3 5 1
+Enter process id 
+5 768
+Enter size required 
+5
+Memory Allocation Success 
+allocated list 
+Start address : 110 
+End Address : 125 
+State : 13 
+Start address : 150 
+End Address : 180 
+State : 87 
+Start address : 180 
+End Address : 185 
+State : 768 
+free pool  list 
+Start address : 100 
+End Address : 110 
+State : -1 
+Start address : 125 
+End Address : 150 
+State : -1 
+Start address : 185 
+End Address : 210 
+State : -1 
+				WORST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+2
+Enter process id 
+13
+			FOUND - Deallocation Success 
+			Memory added to free pool 
+free pool  list 
+Start address : 100 
+End Address : 125 
+State : -1 
+Start address : 125 
+End Address : 150 
+State : -1 
+Start address : 185 
+End Address : 210 
+State : -1 
+				WORST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+4
+free pool  list 
+Start address : 100 
+End Address : 150 
+State : -1 
+Start address : 185 
+End Address : 210 
+State : -1 
+				WORST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+3
+
+
+			Free Pool allocation 
+  |     -1       |     -1     |
+100          150185          210
+
+
+			 Allocated Memory 
+  |     87       |     768     |
+150          180180          185
+
+
+		Physical Memory 
+  |     0       |     87     |
+0          0150          180
+				WORST FIT ALGORITHM 
+1.Entry / Allocate 
+2.Exit / deallocate 
+3.Display 
+4.Coalescing of Holes 
+5.Back to algorithm 
+Enter Choice 
+5
+				Memory Allocation Algorithm 
+1.First Fit 
+2.Best Fit 
+3.Worst Fit 
+4.Exit 
+Enter choice 
+4

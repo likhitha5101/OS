@@ -1,0 +1,83 @@
+		FILE ALLOCATION TECHNIQUES
+Main Memory Size : 1 200
+
+Block size : 10
+Enter file name : Prasanna
+
+File Size : rama    5 50
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 2
+
+
+	DIRECTORY 
+File Name : Prasanna	 Start : 2	 End : 17
+Individual File listing 
+Prasanna DataBlock 2   DataBlock 11   DataBlock 16   DataBlock 13   DataBlock 17
+Prasanna DataBlock 11   DataBlock 16   DataBlock 13   DataBlock 17
+Prasanna DataBlock 13   DataBlock 17
+Prasanna DataBlock 16   DataBlock 13   DataBlock 17
+Prasanna DataBlock 17
+Enter file name : Craz    Sama    Raja
+
+File Size : 70
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 3
+Filename		Block Indexed
+Raja			Datablock 4
+			Datablock 14
+			Datablock 19
+			Datablock 7
+			Datablock 5
+			Datablock 3
+			Datablock 15
+Enter file name : baby y u
+
+File Size : 30
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 3
+Filename		Block Indexed
+Raja			Datablock 4
+			Datablock 14
+			Datablock 19
+			Datablock 7
+			Datablock 5
+			Datablock 3
+			Datablock 15
+babu			Datablock 6
+			Datablock 18
+			Datablock 0
+Enter file name : Kronos
+
+File Size : 20
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 1
+
+
+		FILE LIST 
+Filename : Prasanna	 start : 2	 end : 17
+Filename : Raja	 start : 14	 end : 15
+Filename : babu	 start : 18	 end : 0
+Filename : Kronos	 start : 9	 end : 10
+Enter file name : kebab
+
+File Size : 100
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 1
+Not enough free memory ! Exiting 
+Enter file name : Ora   santhosh
+
+File Size : 100
+1. Contiguos Allocation 
+2. Linked Allocation 
+3. Indexed Allocation 
+4. Enter choice : 4

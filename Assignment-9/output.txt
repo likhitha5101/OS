@@ -1,0 +1,276 @@
+Enter the physical memory size 
+32
+Enter page size1
+	Physical memory is divided into 32 frames 
+Initializing physical memory and frame list
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+4
+Frame : 0	 avail:1 
+Frame : 2	 avail:1 
+Frame : 3	 avail:1 
+Frame : 5	 avail:1 
+Frame : 7	 avail:1 
+Frame : 8	 avail:1 
+Frame : 13	 avail:1 
+Frame : 14	 avail:1 
+Frame : 15	 avail:1 
+Frame : 16	 avail:1 
+Frame : 18	 avail:1 
+Frame : 19	 avail:1 
+Frame : 20	 avail:1 
+Frame : 22	 avail:1 
+Frame : 23	 avail:1 
+Frame : 24	 avail:1 
+Frame : 25	 avail:1 
+Frame : 28	 avail:1 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+1
+
+
+Enter Process ID
+871
+Enter size of the process 
+16
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+3
+Process : 6	 Page: 33	 Frameno : 1 
+Process : 6	 Page: 33	 Frameno : 4 
+Process : 7	 Page: 32	 Frameno : 6 
+Process : 9	 Page: 0	 Frameno : 9 
+Process : 0	 Page: 1	 Frameno : 10 
+Process : 5	 Page: 1	 Frameno : 11 
+Process : 6	 Page: 32	 Frameno : 12 
+Process : 10	 Page: 32	 Frameno : 17 
+Process : 2	 Page: 0	 Frameno : 21 
+Process : 10	 Page: 0	 Frameno : 26 
+Process : 7	 Page: 32	 Frameno : 27 
+Process : 2	 Page: 32	 Frameno : 29 
+Process : 6	 Page: 0	 Frameno : 30 
+Process : 5	 Page: 1	 Frameno : 31 
+Process : 871	 Page: 0	 Frameno : 0 
+Process : 871	 Page: 1	 Frameno : 2 
+Process : 871	 Page: 2	 Frameno : 3 
+Process : 871	 Page: 3	 Frameno : 5 
+Process : 871	 Page: 4	 Frameno : 7 
+Process : 871	 Page: 5	 Frameno : 8 
+Process : 871	 Page: 6	 Frameno : 13 
+Process : 871	 Page: 7	 Frameno : 14 
+Process : 871	 Page: 8	 Frameno : 15 
+Process : 871	 Page: 9	 Frameno : 16 
+Process : 871	 Page: 10	 Frameno : 18 
+Process : 871	 Page: 11	 Frameno : 19 
+Process : 871	 Page: 12	 Frameno : 20 
+Process : 871	 Page: 13	 Frameno : 22 
+Process : 871	 Page: 14	 Frameno : 23 
+Process : 871	 Page: 15	 Frameno : 24 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+4
+Frame : 25	 avail:1 
+Frame : 28	 avail:1 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+1
+
+
+Enter Process ID
+236
+Enter size of the process 
+10
+Request Denied : Not enough memory 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+2
+
+
+Enter Process ID to deallocated
+871
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+3
+Process : 6	 Page: 33	 Frameno : 1 
+Process : 6	 Page: 33	 Frameno : 4 
+Process : 7	 Page: 32	 Frameno : 6 
+Process : 9	 Page: 0	 Frameno : 9 
+Process : 0	 Page: 1	 Frameno : 10 
+Process : 5	 Page: 1	 Frameno : 11 
+Process : 6	 Page: 32	 Frameno : 12 
+Process : 10	 Page: 32	 Frameno : 17 
+Process : 2	 Page: 0	 Frameno : 21 
+Process : 10	 Page: 0	 Frameno : 26 
+Process : 7	 Page: 32	 Frameno : 27 
+Process : 2	 Page: 32	 Frameno : 29 
+Process : 6	 Page: 0	 Frameno : 30 
+Process : 5	 Page: 1	 Frameno : 31 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+4
+Frame : 25	 avail:1 
+Frame : 28	 avail:1 
+Frame : 0	 avail:1 
+Frame : 2	 avail:1 
+Frame : 3	 avail:1 
+Frame : 5	 avail:1 
+Frame : 7	 avail:1 
+Frame : 8	 avail:1 
+Frame : 13	 avail:1 
+Frame : 14	 avail:1 
+Frame : 15	 avail:1 
+Frame : 16	 avail:1 
+Frame : 18	 avail:1 
+Frame : 19	 avail:1 
+Frame : 20	 avail:1 
+Frame : 22	 avail:1 
+Frame : 23	 avail:1 
+Frame : 24	 avail:1 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+1
+
+
+Enter Process ID
+234   912
+Enter size of the process 
+18
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+3
+Process : 6	 Page: 33	 Frameno : 1 
+Process : 6	 Page: 33	 Frameno : 4 
+Process : 7	 Page: 32	 Frameno : 6 
+Process : 9	 Page: 0	 Frameno : 9 
+Process : 0	 Page: 1	 Frameno : 10 
+Process : 5	 Page: 1	 Frameno : 11 
+Process : 6	 Page: 32	 Frameno : 12 
+Process : 10	 Page: 32	 Frameno : 17 
+Process : 2	 Page: 0	 Frameno : 21 
+Process : 10	 Page: 0	 Frameno : 26 
+Process : 7	 Page: 32	 Frameno : 27 
+Process : 2	 Page: 32	 Frameno : 29 
+Process : 6	 Page: 0	 Frameno : 30 
+Process : 5	 Page: 1	 Frameno : 31 
+Process : 912	 Page: 0	 Frameno : 25 
+Process : 912	 Page: 1	 Frameno : 28 
+Process : 912	 Page: 2	 Frameno : 0 
+Process : 912	 Page: 3	 Frameno : 2 
+Process : 912	 Page: 4	 Frameno : 3 
+Process : 912	 Page: 5	 Frameno : 5 
+Process : 912	 Page: 6	 Frameno : 7 
+Process : 912	 Page: 7	 Frameno : 8 
+Process : 912	 Page: 8	 Frameno : 13 
+Process : 912	 Page: 9	 Frameno : 14 
+Process : 912	 Page: 10	 Frameno : 15 
+Process : 912	 Page: 11	 Frameno : 16 
+Process : 912	 Page: 12	 Frameno : 18 
+Process : 912	 Page: 13	 Frameno : 19 
+Process : 912	 Page: 14	 Frameno : 20 
+Process : 912	 Page: 15	 Frameno : 22 
+Process : 912	 Page: 16	 Frameno : 23 
+Process : 912	 Page: 17	 Frameno : 24 
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+4
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+5
+Enter PID: 982
+Enter Logical address: 43
+Page no : 0	 Offset : 43	 Frameno : 0 
+Physical address: 43
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+5
+Enter PID: 4371
+Enter Logical address: 78867
+Page no : 77	 Offset : 19	 Frameno : 1 
+Physical address: 1043
+			 PAGING IMPLEMENTATION
+1.Process Request 
+2.Dealloation 
+3.Display Page table 
+4.Display free frames
+5.Display logical to physical memory conversion
+6.Exit 
+Enter your choice
+6
